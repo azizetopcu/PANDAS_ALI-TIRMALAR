@@ -1,0 +1,30 @@
+import numpy as np
+import seaborn as sns
+import pandas as pd
+
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', 1000)
+
+Görev 1: Seaborn kütüphanesi içerisinden Titanic veri setini tanımlayınız.
+df = sns.load_dataset("titanic")
+df.head()
+df = sns.load_dataset("titanic")
+df.head()
+df.shape
+
+df.describe()
+df.describe(include='all')
+df.isnull().sum()
+
+Görev 2: Yukarıda tanımlanan Titanic veri setindeki kadın ve erkek yolcuların sayısını bulunuz.
+"sex"].value_counts()
+#df["sex"].value_counts(dropna=False)
+df["deck"].value_counts(dropna=False)
+#df.groupby("sex").count()
+#df.groupby("sex").size()
+
+Görev 3: Her bir sutuna ait unique değerlerin sayısını bulunuz.
+df.nunique()
+#df.nunique(dropna=False)
+#df["pclass"].nunique()
